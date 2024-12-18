@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d8d8e2;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            border: 1px solid #decbcb;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #000000;
+        }
+        .left-section {
+            width: 25%;
+            border-right: 1px solid #000000;
+            padding: 1%;
+            padding-left: 2%;
+            background-color: rgba(73, 244, 244, 0.726);
+        }
+        .right-section {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+        }
+        .right-top{
+            border-bottom: 1px solid #000000;
+            background-color: rgba(175, 255, 193, 0.313);
+            display: flex;
+            padding: 2%;
+        }
+        .right-bottom{
+            border-top: 1px solid #ffffff;
+            flex: 1;
+            background-color: rgb(255, 202, 202);
+        }
+        .pfp{
+            flex-direction: column;
+            color: red;
+        }
+        .img{
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 150px;
+            margin-right: 20px; 
+            object-fit: cover;
+            object-position: center;
+        }
+        .details{
+            text-align: right;
+            flex: 1;
+        }
+        .experience-list {
+            margin-top: 20px;
+        }
+        .experience-item {
+            margin: 10px 0;
+            color: #004b7e;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .experience-item:hover {
+            text-decoration: underline;
+        }
+        .experience-details {
+            display: none;
+        }
+        .project-item {
+            margin: 10px 0;
+            color: #004b7e;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .project-item:hover {
+            text-decoration: underline;
+        }
+        .project-details {
+            display: none;
+        }
+        .certification-item {
+            margin: 10px 0;
+            color: #004b7e;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .certification-item:hover {
+            text-decoration: underline;
+        }
+        .certification-details {
+            display: none;
+        }
+        .excul-item {
+            margin: 10px 0;
+            color: #004b7e;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .excul-item:hover {
+            text-decoration: underline;
+        }
+        .excul-details {
+            display: none;
+        }
+        .details-visible {
+            display: block;
+            flex: 1;
+            padding: 3%;
+            background-color: rgba(255, 202, 202);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section" >
+            <h2>Education</h2>
+            <ul>
+                <li><b>KIIT University</b>: Bachelor of Technology in Computer Science (2022-2026), CGPA: 8.92</li>
+                <li><b>City Montessori School:</b> Mathematics, ISC(2019 - 2021), Percentage: 95.5%
+            </ul>
+            <h2>Skills</h2>
+            <ul>
+                <li><b>Coursework:</b> DSA, OOP, DBMS, ToC, IoT</li>
+                <li><b>Languages:</b> C++, C, Java, Python</li>
+                <li><b>Database:</b> MySQL, MongoDB</li>
+                <li><b>Tools:</b> Selenium, JSON</li>
+                <li><b>Others:</b> Team building, Organization</li>
+            </ul>
+            <h2>Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item" onclick="showDetails('experience-details-1')">
+                    Competitve Programmer at Kodewreck
+                </div>
+                <div class="experience-item" onclick="showDetails('experience-details-2')">
+                    Team Lead in Kraftovity
+                </div>
+            </div>
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-item" onclick="showDetails('project-details-1')">
+                    Movie Review Site
+                </div>
+            </div>
+            <h2>Certifications</h2>
+            <div class="certification-list">
+                <div class="certification-item" onclick="showDetails('certification-details-1')">
+                    Certifications
+                </div>
+            </div>
+            <h2>Extra-Curricular</h2>
+            <div class="excul-list">
+                <div class="excul-item" onclick="showDetails('excul-details-1')">
+                    Events
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="right-top">
+                <div class="pfp">
+                    <img class="img" src="lab1.jpg" alt="Profile Picture">
+                </div>
+                <div class="details">
+                    <p>
+                        <h2 style="margin: 0; padding: 0;">Dhruv Singh Kushwaha</h2><br>
+                        <b>Mobile No: </b>+91 9336067800<br>
+                        <b>Email:</b> dhruvsingh9152@gmail.com<br>
+                        <b>Linkedin: </b><a href="https://www.linkedin.com/in/dhruvkushwaha" target="_blank">linkedin.com/dhruvkushwaha</a>
+                    </p>
+                </div>
+            </div>
+            <div class="right-bottom">
+                <div id="experience-details-1" class="experience-details">
+                    <b style="font-size: large;">Kodewreck</b>
+                    <p style="padding-left: 3%;">Competitive Coding Wing:</p>
+                    <ul>
+                        <li>Participate in coding problem solving contests online and offline.</li>
+                        <li>On multiple occasions collaborating with team members to develop efficient solutions to complex problems.</li>
+                        <li>Participated in agile development processes, contributing to sprint planning and code reviews.</li>
+                        <li>Optimised as a member of the Competitive Programmer Team of Kodevortex event held to initiate the
+                            inkling of competitive coding in students.</li>
+                        <li>Contributed to the successful execution of multiple events.</li>
+                    </ul>
+                </div>
+
+                <div id="experience-details-2" class="experience-details">
+                    <b style="font-size: large;">Kraftovity</b>
+                    <p style="padding-left: 3%;">Artist Team Lead:</p>
+                    <ul>
+                        <li>Administered the members of artist socity fro successful organisation of multiple events</li>
+                        <li>Led the organisation and decoration of multiple flagship events such as KRITARTH, CHIMERA, KHETSHEN, UDGHOSH all held at KIIT University, Bhubaneshwar.</li>
+                        <li>Organization of Art competitions in as well as outside KIIT University.</li>
+                    </ul>
+                </div>
+                <div id="project-details-1" class="project-details">
+                    <b style="font-size: large;">Movie Review Site</b>
+                    <ul>
+                        <li>Built a website to search movies by name and view corresponding reviews.</li>
+                        <li>This project was built using technologies such as HTML, CSS and JavaScript.</li>
+                        <li>Designed a user-friendly interface allowing users to submit and display reviews.</li>
+                    </ul>
+                </div>
+                <div id="certification-details-1" class="certification-details">
+                    <b style="font-size: large;">Certifications</b>
+                    <ul>
+                        <li>Rating of 1156 on CodeChef.</li>
+                        <li> 3 star in Problem Solving on Hackerrank.</li>
+                        <li>4 star in C on Hackerrank.</li>
+                        <li>3 star in C++ on Hackerrank.</li>
+                    </ul>
+                </div>
+                <div id="excul-details-1" class="excul-details">
+                    <b style="font-size: large;">Extra-Curricular</b>
+                    <ul>
+                        <li>Managed as the member of the Organising Committee of KIITFEST, held at KIIT University, Bhubaneswar as a member of the Decoration team.</li>
+                        <li>Secured 2nd place in Qutopia Launchpad XXIII organised at KIIT University, Bhubaneswar.</li>
+                        <li>Attained 8th position in Game of Codes organised by Kodewreck during KIITFEST at KIIT University, Bhubaneswar.</li>
+                        <li>Held the position of House Captain and led the house to victory in school as well as in inter-school competitions. Organized various events and activities within the school community, fostering a sense of unity and comradeship among students.</li>
+                    </ul>
+                </div>
+                
+        </div>
+    </div>
+
+    <script>
+        function showDetails(id) {
+            const details = document.getElementById(id);
+            if (details.classList.contains('details-visible')) {
+                details.classList.remove('details-visible');
+            } else {
+                // Hide other details if needed (optional, for multiple items)
+                const allDetails = document.querySelectorAll('.experience-details');
+                allDetails.forEach(detail => detail.classList.remove('details-visible'));
+                details.classList.add('details-visible');
+
+                const allDetails1 = document.querySelectorAll('.project-details');
+                allDetails1.forEach(detail => detail.classList.remove('details-visible'));
+                details.classList.add('details-visible');
+                
+                const allDetails2 = document.querySelectorAll('.certification-details');
+                allDetails2.forEach(detail => detail.classList.remove('details-visible'));
+                details.classList.add('details-visible');
+
+                const allDetails3 = document.querySelectorAll('.excul-details');
+                allDetails3.forEach(detail => detail.classList.remove('details-visible'));
+                details.classList.add('details-visible');
+            }
+        }
+    </script>
+</body>
+</html>
